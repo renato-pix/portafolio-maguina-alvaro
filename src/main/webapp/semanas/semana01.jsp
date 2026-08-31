@@ -34,7 +34,7 @@
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             background: var(--card-bg);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -69,15 +69,42 @@
 
         p {
             color: var(--subtext);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.6;
+        }
+
+        .grid-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .info-card h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            color: var(--subtext);
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         .card-action {
             background: rgba(255, 255, 255, 0.03);
             border: 1px dashed rgba(255, 255, 255, 0.15);
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
         }
 
@@ -85,7 +112,7 @@
             display: inline-block;
             background: linear-gradient(135deg, var(--accent), var(--accent-hover));
             color: #0f172a;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
@@ -99,14 +126,8 @@
         }
 
         @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
@@ -114,11 +135,49 @@
     <div class="container">
         <a href="../index.jsp" class="btn-back">← Volver al e-portafolio</a>
         <h1>Semana 01: Fundamentos de un Proyecto Web</h1>
-        <p>En esta sección se encuentra la evidencia correspondiente al resumen organizador sobre conceptos de Frontend, Backend, Base de Datos y control de versiones con Git[cite: 1].</p>
-        
+        <p>Resumen técnico de la presentación sobre la estructura, componentes y tecnologías esenciales para desarrollar proyectos web.</p>
+
+        <div class="grid-summary">
+            <div class="info-card">
+                <h3>Características</h3>
+                <ul>
+                    <li>• Objetivos definidos</li>
+                    <li>• Orientado a usuarios específicos</li>
+                    <li>• Uso de tecnologías web</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Tipos de Proyecto</h3>
+                <ul>
+                    <li>• Informativos</li>
+                    <li>• Comerciales</li>
+                    <li>• Educativos</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Estructura Web</h3>
+                <ul>
+                    <li>• Frontend (HTML, CSS, JS)</li>
+                    <li>• Backend (Servidor)</li>
+                    <li>• Base de Datos y APIs</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Componentes Clave</h3>
+                <ul>
+                    <li>• Diseño UI / UX</li>
+                    <li>• Seguridad y Accesibilidad</li>
+                    <li>• Control con Git</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="card-action">
-            <!-- Pega la URL de tu infografía pública de Canva o Genially en el atributo href -->
-            <a href="TU_ENLACE_DE_CANVA_O_GENIALLY" target="_blank" class="btn-action">Ver Infografía Interactiva</a>
+            <p style="margin-bottom: 15px;">Descarga o revisa la presentación PDF completa de la clase:</p>
+            <a href="Fundamentos_de_un_Proyecto_Web.pdf" target="_blank" class="btn-action">Abrir Presentación PDF</a>
         </div>
     </div>
 </body>
